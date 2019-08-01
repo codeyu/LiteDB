@@ -338,5 +338,9 @@
   <ItemGroup>
     <None Include="Resources\disk.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\tab.add.png" />
+    <Content Include="Resources\tab.close.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

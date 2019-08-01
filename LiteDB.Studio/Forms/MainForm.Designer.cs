@@ -34,14 +34,11 @@
             this.tvwDatabase = new System.Windows.Forms.TreeView();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.splitRight = new System.Windows.Forms.SplitContainer();
-            this.txtSql = new ICSharpCode.TextEditor.TextEditorControl();
             this.tabResult = new System.Windows.Forms.TabControl();
             this.tabGrid = new System.Windows.Forms.TabPage();
             this.grdResult = new System.Windows.Forms.DataGridView();
             this.tabText = new System.Windows.Forms.TabPage();
-            this.txtResult = new ICSharpCode.TextEditor.TextEditorControl();
             this.tabParameters = new System.Windows.Forms.TabPage();
-            this.txtParameters = new ICSharpCode.TextEditor.TextEditorControl();
             this.tabSql = new System.Windows.Forms.TabControl();
             this.stbStatus = new System.Windows.Forms.StatusStrip();
             this.lblCursor = new System.Windows.Forms.ToolStripStatusLabel();
@@ -49,36 +46,39 @@
             this.prgRunning = new System.Windows.Forms.ToolStripProgressBar();
             this.lblElapsed = new System.Windows.Forms.ToolStripStatusLabel();
             this.tlbMain = new System.Windows.Forms.ToolStrip();
-            this.btnConnect = new System.Windows.Forms.ToolStripButton();
             this.tlbSep1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.tlbSep2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnRun = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ctxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnuSep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuSep2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ctxMenuRoot = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.imgCodeCompletion = new System.Windows.Forms.ImageList(this.components);
+            this.btnConnect = new System.Windows.Forms.ToolStripButton();
+            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
+            this.btnRun = new System.Windows.Forms.ToolStripButton();
             this.btnBegin = new System.Windows.Forms.ToolStripButton();
             this.btnCommit = new System.Windows.Forms.ToolStripButton();
             this.btnRollback = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCheckpoint = new System.Windows.Forms.ToolStripButton();
-            this.ctxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuQueryAll = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuQueryCount = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExplanPlan = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSep1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuIndexes = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuExport = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAnalyze = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRename = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDropCollection = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctxMenuRoot = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuImport = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCheckpoint = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVaccum = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuShrink = new System.Windows.Forms.ToolStripMenuItem();
-            this.imgCodeCompletion = new System.Windows.Forms.ImageList(this.components);
+            this.txtSql = new ICSharpCode.TextEditor.TextEditorControl();
+            this.txtResult = new ICSharpCode.TextEditor.TextEditorControl();
+            this.txtParameters = new ICSharpCode.TextEditor.TextEditorControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
             this.splitMain.Panel1.SuspendLayout();
             this.splitMain.Panel2.SuspendLayout();
@@ -165,22 +165,6 @@
             this.splitRight.SplitterDistance = 174;
             this.splitRight.TabIndex = 8;
             // 
-            // txtSql
-            // 
-            this.txtSql.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSql.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSql.ConvertTabsToSpaces = true;
-            this.txtSql.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSql.Highlighting = "SQL";
-            this.txtSql.Location = new System.Drawing.Point(0, 0);
-            this.txtSql.Name = "txtSql";
-            this.txtSql.ShowLineNumbers = false;
-            this.txtSql.ShowVRuler = false;
-            this.txtSql.Size = new System.Drawing.Size(828, 171);
-            this.txtSql.TabIndex = 2;
-            // 
             // tabResult
             // 
             this.tabResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -218,7 +202,7 @@
             this.grdResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdResult.Location = new System.Drawing.Point(6, 5);
             this.grdResult.Name = "grdResult";
-            this.grdResult.Size = new System.Drawing.Size(811, 348);
+            this.grdResult.Size = new System.Drawing.Size(811, 344);
             this.grdResult.TabIndex = 0;
             this.grdResult.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.GrdResult_CellBeginEdit);
             this.grdResult.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdResult_CellEndEdit);
@@ -227,59 +211,28 @@
             // tabText
             // 
             this.tabText.Controls.Add(this.txtResult);
-            this.tabText.Location = new System.Drawing.Point(4, 22);
+            this.tabText.Location = new System.Drawing.Point(4, 24);
             this.tabText.Name = "tabText";
             this.tabText.Padding = new System.Windows.Forms.Padding(3);
-            this.tabText.Size = new System.Drawing.Size(824, 363);
+            this.tabText.Size = new System.Drawing.Size(824, 361);
             this.tabText.TabIndex = 3;
             this.tabText.Text = "Text";
             this.tabText.UseVisualStyleBackColor = true;
             // 
-            // txtResult
-            // 
-            this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtResult.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtResult.Highlighting = "JSON";
-            this.txtResult.Location = new System.Drawing.Point(5, 4);
-            this.txtResult.Name = "txtResult";
-            this.txtResult.ReadOnly = true;
-            this.txtResult.ShowLineNumbers = false;
-            this.txtResult.ShowVRuler = false;
-            this.txtResult.Size = new System.Drawing.Size(812, 351);
-            this.txtResult.TabIndex = 1;
-            // 
             // tabParameters
             // 
             this.tabParameters.Controls.Add(this.txtParameters);
-            this.tabParameters.Location = new System.Drawing.Point(4, 22);
+            this.tabParameters.Location = new System.Drawing.Point(4, 24);
             this.tabParameters.Name = "tabParameters";
             this.tabParameters.Padding = new System.Windows.Forms.Padding(3);
-            this.tabParameters.Size = new System.Drawing.Size(824, 363);
+            this.tabParameters.Size = new System.Drawing.Size(824, 361);
             this.tabParameters.TabIndex = 5;
             this.tabParameters.Text = "Parameters";
             this.tabParameters.UseVisualStyleBackColor = true;
             // 
-            // txtParameters
-            // 
-            this.txtParameters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtParameters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtParameters.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParameters.Highlighting = "JSON";
-            this.txtParameters.Location = new System.Drawing.Point(6, 5);
-            this.txtParameters.Name = "txtParameters";
-            this.txtParameters.ReadOnly = true;
-            this.txtParameters.ShowLineNumbers = false;
-            this.txtParameters.ShowVRuler = false;
-            this.txtParameters.Size = new System.Drawing.Size(811, 350);
-            this.txtParameters.TabIndex = 2;
-            // 
             // tabSql
             // 
+            this.tabSql.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabSql.Location = new System.Drawing.Point(3, 0);
             this.tabSql.Margin = new System.Windows.Forms.Padding(0);
             this.tabSql.Name = "tabSql";
@@ -287,9 +240,10 @@
             this.tabSql.Size = new System.Drawing.Size(821, 24);
             this.tabSql.TabIndex = 9;
             this.tabSql.TabStop = false;
+            this.tabSql.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TabSql_DrawItem);
             this.tabSql.SelectedIndexChanged += new System.EventHandler(this.TabSql_SelectedIndexChanged);
             this.tabSql.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabSql_Selected);
-            this.tabSql.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabSql_MouseClick);
+            this.tabSql.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TabSql_MouseDown);
             // 
             // stbStatus
             // 
@@ -307,7 +261,7 @@
             // lblCursor
             // 
             this.lblCursor.Name = "lblCursor";
-            this.lblCursor.Size = new System.Drawing.Size(682, 17);
+            this.lblCursor.Size = new System.Drawing.Size(713, 17);
             this.lblCursor.Spring = true;
             this.lblCursor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -349,96 +303,29 @@
             this.tlbMain.Location = new System.Drawing.Point(0, 0);
             this.tlbMain.Name = "tlbMain";
             this.tlbMain.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.tlbMain.Size = new System.Drawing.Size(1090, 33);
+            this.tlbMain.Size = new System.Drawing.Size(1090, 34);
             this.tlbMain.TabIndex = 12;
             this.tlbMain.Text = "toolStrip";
-            // 
-            // btnConnect
-            // 
-            this.btnConnect.Image = global::LiteDB.Studio.Properties.Resources.database_connect;
-            this.btnConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Padding = new System.Windows.Forms.Padding(3);
-            this.btnConnect.Size = new System.Drawing.Size(78, 26);
-            this.btnConnect.Text = "Connect";
-            this.btnConnect.Click += new System.EventHandler(this.BtnConnect_Click);
             // 
             // tlbSep1
             // 
             this.tlbSep1.Name = "tlbSep1";
-            this.tlbSep1.Size = new System.Drawing.Size(6, 29);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Image = global::LiteDB.Studio.Properties.Resources.arrow_refresh;
-            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Padding = new System.Windows.Forms.Padding(3);
-            this.btnRefresh.Size = new System.Drawing.Size(72, 26);
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
+            this.tlbSep1.Size = new System.Drawing.Size(6, 30);
             // 
             // tlbSep2
             // 
             this.tlbSep2.Name = "tlbSep2";
-            this.tlbSep2.Size = new System.Drawing.Size(6, 29);
-            // 
-            // btnRun
-            // 
-            this.btnRun.Image = global::LiteDB.Studio.Properties.Resources.resultset_next;
-            this.btnRun.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRun.Name = "btnRun";
-            this.btnRun.Padding = new System.Windows.Forms.Padding(3);
-            this.btnRun.Size = new System.Drawing.Size(54, 26);
-            this.btnRun.Text = "Run";
-            this.btnRun.Click += new System.EventHandler(this.BtnRun_Click);
+            this.tlbSep2.Size = new System.Drawing.Size(6, 30);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 29);
-            // 
-            // btnBegin
-            // 
-            this.btnBegin.Image = global::LiteDB.Studio.Properties.Resources.database;
-            this.btnBegin.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBegin.Name = "btnBegin";
-            this.btnBegin.Size = new System.Drawing.Size(57, 26);
-            this.btnBegin.Text = "Begin";
-            this.btnBegin.ToolTipText = "Begin Transaction";
-            this.btnBegin.Click += new System.EventHandler(this.BtnBegin_Click);
-            // 
-            // btnCommit
-            // 
-            this.btnCommit.Image = global::LiteDB.Studio.Properties.Resources.database_save;
-            this.btnCommit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCommit.Name = "btnCommit";
-            this.btnCommit.Size = new System.Drawing.Size(71, 26);
-            this.btnCommit.Text = "Commit";
-            this.btnCommit.Click += new System.EventHandler(this.BtnCommit_Click);
-            // 
-            // btnRollback
-            // 
-            this.btnRollback.Image = global::LiteDB.Studio.Properties.Resources.database_delete;
-            this.btnRollback.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRollback.Name = "btnRollback";
-            this.btnRollback.Size = new System.Drawing.Size(72, 26);
-            this.btnRollback.Text = "Rollback";
-            this.btnRollback.Click += new System.EventHandler(this.BtnRollback_Click);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 29);
-            // 
-            // btnCheckpoint
-            // 
-            this.btnCheckpoint.Image = global::LiteDB.Studio.Properties.Resources.application_put;
-            this.btnCheckpoint.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCheckpoint.Name = "btnCheckpoint";
-            this.btnCheckpoint.Size = new System.Drawing.Size(88, 26);
-            this.btnCheckpoint.Text = "Checkpoint";
-            this.btnCheckpoint.Click += new System.EventHandler(this.BtnCheckpoint_Click);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
             // ctxMenu
             // 
@@ -454,82 +341,18 @@
             this.mnuRename,
             this.mnuDropCollection});
             this.ctxMenu.Name = "ctxMenu";
-            this.ctxMenu.Size = new System.Drawing.Size(156, 192);
+            this.ctxMenu.Size = new System.Drawing.Size(167, 192);
             this.ctxMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CtxMenu_ItemClicked);
-            // 
-            // mnuQueryAll
-            // 
-            this.mnuQueryAll.Image = global::LiteDB.Studio.Properties.Resources.table_lightning;
-            this.mnuQueryAll.Name = "mnuQueryAll";
-            this.mnuQueryAll.Size = new System.Drawing.Size(155, 22);
-            this.mnuQueryAll.Tag = "SELECT $ FROM {0};";
-            this.mnuQueryAll.Text = "Query";
-            // 
-            // mnuQueryCount
-            // 
-            this.mnuQueryCount.Image = global::LiteDB.Studio.Properties.Resources.table;
-            this.mnuQueryCount.Name = "mnuQueryCount";
-            this.mnuQueryCount.Size = new System.Drawing.Size(155, 22);
-            this.mnuQueryCount.Tag = "SELECT COUNT(*) FROM {0};";
-            this.mnuQueryCount.Text = "Count";
-            // 
-            // mnuExplanPlan
-            // 
-            this.mnuExplanPlan.Image = global::LiteDB.Studio.Properties.Resources.table_sort;
-            this.mnuExplanPlan.Name = "mnuExplanPlan";
-            this.mnuExplanPlan.Size = new System.Drawing.Size(155, 22);
-            this.mnuExplanPlan.Tag = "EXPLAIN SELECT $ FROM {0};";
-            this.mnuExplanPlan.Text = "Explain plan";
             // 
             // mnuSep1
             // 
             this.mnuSep1.Name = "mnuSep1";
-            this.mnuSep1.Size = new System.Drawing.Size(152, 6);
-            // 
-            // mnuIndexes
-            // 
-            this.mnuIndexes.Image = global::LiteDB.Studio.Properties.Resources.key;
-            this.mnuIndexes.Name = "mnuIndexes";
-            this.mnuIndexes.Size = new System.Drawing.Size(155, 22);
-            this.mnuIndexes.Tag = "SELECT $ FROM $indexes WHERE collection = \"{0}\";";
-            this.mnuIndexes.Text = "Indexes";
+            this.mnuSep1.Size = new System.Drawing.Size(163, 6);
             // 
             // mnuSep2
             // 
             this.mnuSep2.Name = "mnuSep2";
-            this.mnuSep2.Size = new System.Drawing.Size(152, 6);
-            // 
-            // mnuExport
-            // 
-            this.mnuExport.Image = global::LiteDB.Studio.Properties.Resources.table_save;
-            this.mnuExport.Name = "mnuExport";
-            this.mnuExport.Size = new System.Drawing.Size(155, 22);
-            this.mnuExport.Tag = "SELECT $\\n  INTO $file_json(\'C:/temp/{0}.json\')\\n  FROM {0};";
-            this.mnuExport.Text = "Export to JSON";
-            // 
-            // mnuAnalyze
-            // 
-            this.mnuAnalyze.Image = global::LiteDB.Studio.Properties.Resources.page_white_gear;
-            this.mnuAnalyze.Name = "mnuAnalyze";
-            this.mnuAnalyze.Size = new System.Drawing.Size(155, 22);
-            this.mnuAnalyze.Tag = "ANALYZE {0};";
-            this.mnuAnalyze.Text = "Analyze";
-            // 
-            // mnuRename
-            // 
-            this.mnuRename.Image = global::LiteDB.Studio.Properties.Resources.textfield_rename;
-            this.mnuRename.Name = "mnuRename";
-            this.mnuRename.Size = new System.Drawing.Size(155, 22);
-            this.mnuRename.Tag = "RENAME COLLECTION {0} TO new_name;";
-            this.mnuRename.Text = "Rename";
-            // 
-            // mnuDropCollection
-            // 
-            this.mnuDropCollection.Image = global::LiteDB.Studio.Properties.Resources.table_delete;
-            this.mnuDropCollection.Name = "mnuDropCollection";
-            this.mnuDropCollection.Size = new System.Drawing.Size(155, 22);
-            this.mnuDropCollection.Tag = "DROP COLLECTION {0};";
-            this.mnuDropCollection.Text = "Drop collection";
+            this.mnuSep2.Size = new System.Drawing.Size(163, 6);
             // 
             // ctxMenuRoot
             // 
@@ -541,54 +364,13 @@
             this.mnuVaccum,
             this.mnuShrink});
             this.ctxMenuRoot.Name = "ctxMenu";
-            this.ctxMenuRoot.Size = new System.Drawing.Size(171, 120);
+            this.ctxMenuRoot.Size = new System.Drawing.Size(185, 120);
             this.ctxMenuRoot.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CtxMenuRoot_ItemClicked);
-            // 
-            // mnuInfo
-            // 
-            this.mnuInfo.Image = global::LiteDB.Studio.Properties.Resources.information;
-            this.mnuInfo.Name = "mnuInfo";
-            this.mnuInfo.Size = new System.Drawing.Size(170, 22);
-            this.mnuInfo.Tag = "SELECT $ FROM $database;";
-            this.mnuInfo.Text = "Database Info";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(167, 6);
-            // 
-            // mnuImport
-            // 
-            this.mnuImport.Image = global::LiteDB.Studio.Properties.Resources.layout_add;
-            this.mnuImport.Name = "mnuImport";
-            this.mnuImport.Size = new System.Drawing.Size(170, 22);
-            this.mnuImport.Tag = "SELECT $\\n  INTO new_col\\n  FROM $file_json(\'C:/temp/file.json\');";
-            this.mnuImport.Text = "Import from JSON";
-            // 
-            // mnuCheckpoint
-            // 
-            this.mnuCheckpoint.Image = global::LiteDB.Studio.Properties.Resources.application_put;
-            this.mnuCheckpoint.Name = "mnuCheckpoint";
-            this.mnuCheckpoint.Size = new System.Drawing.Size(170, 22);
-            this.mnuCheckpoint.Tag = "CHECKPOINT;";
-            this.mnuCheckpoint.Text = "Checkpoint";
-            // 
-            // mnuVaccum
-            // 
-            this.mnuVaccum.Image = global::LiteDB.Studio.Properties.Resources.brick;
-            this.mnuVaccum.Name = "mnuVaccum";
-            this.mnuVaccum.Size = new System.Drawing.Size(170, 22);
-            this.mnuVaccum.Tag = "VACCUM;";
-            this.mnuVaccum.Text = "Vaccum";
-            // 
-            // mnuShrink
-            // 
-            this.mnuShrink.Image = global::LiteDB.Studio.Properties.Resources.compress;
-            this.mnuShrink.Name = "mnuShrink";
-            this.mnuShrink.Size = new System.Drawing.Size(170, 22);
-            this.mnuShrink.Tag = "";
-            this.mnuShrink.Text = "Shrink";
-            this.mnuShrink.Click += new System.EventHandler(this.mnuShrink_Click);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(181, 6);
             // 
             // imgCodeCompletion
             // 
@@ -600,6 +382,226 @@
             this.imgCodeCompletion.Images.SetKeyName(3, "KEYWORD");
             this.imgCodeCompletion.Images.SetKeyName(4, "SYSTEM");
             this.imgCodeCompletion.Images.SetKeyName(5, "SYSTEM_FN");
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Image = global::LiteDB.Studio.Properties.Resources.database_connect;
+            this.btnConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Padding = new System.Windows.Forms.Padding(3);
+            this.btnConnect.Size = new System.Drawing.Size(81, 27);
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.Click += new System.EventHandler(this.BtnConnect_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Image = global::LiteDB.Studio.Properties.Resources.arrow_refresh;
+            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Padding = new System.Windows.Forms.Padding(3);
+            this.btnRefresh.Size = new System.Drawing.Size(78, 27);
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
+            // 
+            // btnRun
+            // 
+            this.btnRun.Image = global::LiteDB.Studio.Properties.Resources.resultset_next;
+            this.btnRun.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Padding = new System.Windows.Forms.Padding(3);
+            this.btnRun.Size = new System.Drawing.Size(56, 27);
+            this.btnRun.Text = "Run";
+            this.btnRun.Click += new System.EventHandler(this.BtnRun_Click);
+            // 
+            // btnBegin
+            // 
+            this.btnBegin.Image = global::LiteDB.Studio.Properties.Resources.database;
+            this.btnBegin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBegin.Name = "btnBegin";
+            this.btnBegin.Size = new System.Drawing.Size(61, 27);
+            this.btnBegin.Text = "Begin";
+            this.btnBegin.ToolTipText = "Begin Transaction";
+            this.btnBegin.Click += new System.EventHandler(this.BtnBegin_Click);
+            // 
+            // btnCommit
+            // 
+            this.btnCommit.Image = global::LiteDB.Studio.Properties.Resources.database_save;
+            this.btnCommit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCommit.Name = "btnCommit";
+            this.btnCommit.Size = new System.Drawing.Size(73, 27);
+            this.btnCommit.Text = "Commit";
+            this.btnCommit.Click += new System.EventHandler(this.BtnCommit_Click);
+            // 
+            // btnRollback
+            // 
+            this.btnRollback.Image = global::LiteDB.Studio.Properties.Resources.database_delete;
+            this.btnRollback.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRollback.Name = "btnRollback";
+            this.btnRollback.Size = new System.Drawing.Size(78, 27);
+            this.btnRollback.Text = "Rollback";
+            this.btnRollback.Click += new System.EventHandler(this.BtnRollback_Click);
+            // 
+            // btnCheckpoint
+            // 
+            this.btnCheckpoint.Image = global::LiteDB.Studio.Properties.Resources.application_put;
+            this.btnCheckpoint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCheckpoint.Name = "btnCheckpoint";
+            this.btnCheckpoint.Size = new System.Drawing.Size(93, 27);
+            this.btnCheckpoint.Text = "Checkpoint";
+            this.btnCheckpoint.Click += new System.EventHandler(this.BtnCheckpoint_Click);
+            // 
+            // mnuQueryAll
+            // 
+            this.mnuQueryAll.Image = global::LiteDB.Studio.Properties.Resources.table_lightning;
+            this.mnuQueryAll.Name = "mnuQueryAll";
+            this.mnuQueryAll.Size = new System.Drawing.Size(166, 22);
+            this.mnuQueryAll.Tag = "SELECT $ FROM {0};";
+            this.mnuQueryAll.Text = "Query";
+            // 
+            // mnuQueryCount
+            // 
+            this.mnuQueryCount.Image = global::LiteDB.Studio.Properties.Resources.table;
+            this.mnuQueryCount.Name = "mnuQueryCount";
+            this.mnuQueryCount.Size = new System.Drawing.Size(166, 22);
+            this.mnuQueryCount.Tag = "SELECT COUNT(*) FROM {0};";
+            this.mnuQueryCount.Text = "Count";
+            // 
+            // mnuExplanPlan
+            // 
+            this.mnuExplanPlan.Image = global::LiteDB.Studio.Properties.Resources.table_sort;
+            this.mnuExplanPlan.Name = "mnuExplanPlan";
+            this.mnuExplanPlan.Size = new System.Drawing.Size(166, 22);
+            this.mnuExplanPlan.Tag = "EXPLAIN SELECT $ FROM {0};";
+            this.mnuExplanPlan.Text = "Explain plan";
+            // 
+            // mnuIndexes
+            // 
+            this.mnuIndexes.Image = global::LiteDB.Studio.Properties.Resources.key;
+            this.mnuIndexes.Name = "mnuIndexes";
+            this.mnuIndexes.Size = new System.Drawing.Size(166, 22);
+            this.mnuIndexes.Tag = "SELECT $ FROM $indexes WHERE collection = \"{0}\";";
+            this.mnuIndexes.Text = "Indexes";
+            // 
+            // mnuExport
+            // 
+            this.mnuExport.Image = global::LiteDB.Studio.Properties.Resources.table_save;
+            this.mnuExport.Name = "mnuExport";
+            this.mnuExport.Size = new System.Drawing.Size(166, 22);
+            this.mnuExport.Tag = "SELECT $\\n  INTO $file_json(\'C:/temp/{0}.json\')\\n  FROM {0};";
+            this.mnuExport.Text = "Export to JSON";
+            // 
+            // mnuAnalyze
+            // 
+            this.mnuAnalyze.Image = global::LiteDB.Studio.Properties.Resources.page_white_gear;
+            this.mnuAnalyze.Name = "mnuAnalyze";
+            this.mnuAnalyze.Size = new System.Drawing.Size(166, 22);
+            this.mnuAnalyze.Tag = "ANALYZE {0};";
+            this.mnuAnalyze.Text = "Analyze";
+            // 
+            // mnuRename
+            // 
+            this.mnuRename.Image = global::LiteDB.Studio.Properties.Resources.textfield_rename;
+            this.mnuRename.Name = "mnuRename";
+            this.mnuRename.Size = new System.Drawing.Size(166, 22);
+            this.mnuRename.Tag = "RENAME COLLECTION {0} TO new_name;";
+            this.mnuRename.Text = "Rename";
+            // 
+            // mnuDropCollection
+            // 
+            this.mnuDropCollection.Image = global::LiteDB.Studio.Properties.Resources.table_delete;
+            this.mnuDropCollection.Name = "mnuDropCollection";
+            this.mnuDropCollection.Size = new System.Drawing.Size(166, 22);
+            this.mnuDropCollection.Tag = "DROP COLLECTION {0};";
+            this.mnuDropCollection.Text = "Drop collection";
+            // 
+            // mnuInfo
+            // 
+            this.mnuInfo.Image = global::LiteDB.Studio.Properties.Resources.information;
+            this.mnuInfo.Name = "mnuInfo";
+            this.mnuInfo.Size = new System.Drawing.Size(184, 22);
+            this.mnuInfo.Tag = "SELECT $ FROM $database;";
+            this.mnuInfo.Text = "Database Info";
+            // 
+            // mnuImport
+            // 
+            this.mnuImport.Image = global::LiteDB.Studio.Properties.Resources.layout_add;
+            this.mnuImport.Name = "mnuImport";
+            this.mnuImport.Size = new System.Drawing.Size(184, 22);
+            this.mnuImport.Tag = "SELECT $\\n  INTO new_col\\n  FROM $file_json(\'C:/temp/file.json\');";
+            this.mnuImport.Text = "Import from JSON";
+            // 
+            // mnuCheckpoint
+            // 
+            this.mnuCheckpoint.Image = global::LiteDB.Studio.Properties.Resources.application_put;
+            this.mnuCheckpoint.Name = "mnuCheckpoint";
+            this.mnuCheckpoint.Size = new System.Drawing.Size(184, 22);
+            this.mnuCheckpoint.Tag = "CHECKPOINT;";
+            this.mnuCheckpoint.Text = "Checkpoint";
+            // 
+            // mnuVaccum
+            // 
+            this.mnuVaccum.Image = global::LiteDB.Studio.Properties.Resources.brick;
+            this.mnuVaccum.Name = "mnuVaccum";
+            this.mnuVaccum.Size = new System.Drawing.Size(184, 22);
+            this.mnuVaccum.Tag = "VACCUM;";
+            this.mnuVaccum.Text = "Vaccum";
+            // 
+            // mnuShrink
+            // 
+            this.mnuShrink.Image = global::LiteDB.Studio.Properties.Resources.compress;
+            this.mnuShrink.Name = "mnuShrink";
+            this.mnuShrink.Size = new System.Drawing.Size(184, 22);
+            this.mnuShrink.Tag = "";
+            this.mnuShrink.Text = "Shrink";
+            this.mnuShrink.Click += new System.EventHandler(this.mnuShrink_Click);
+            // 
+            // txtSql
+            // 
+            this.txtSql.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSql.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSql.ConvertTabsToSpaces = true;
+            this.txtSql.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSql.Highlighting = "SQL";
+            this.txtSql.Location = new System.Drawing.Point(0, 0);
+            this.txtSql.Name = "txtSql";
+            this.txtSql.ShowLineNumbers = false;
+            this.txtSql.ShowVRuler = false;
+            this.txtSql.Size = new System.Drawing.Size(828, 171);
+            this.txtSql.TabIndex = 2;
+            // 
+            // txtResult
+            // 
+            this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtResult.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResult.Highlighting = "JSON";
+            this.txtResult.Location = new System.Drawing.Point(5, 4);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.ReadOnly = true;
+            this.txtResult.ShowLineNumbers = false;
+            this.txtResult.ShowVRuler = false;
+            this.txtResult.Size = new System.Drawing.Size(812, 351);
+            this.txtResult.TabIndex = 1;
+            // 
+            // txtParameters
+            // 
+            this.txtParameters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtParameters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtParameters.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParameters.Highlighting = "JSON";
+            this.txtParameters.Location = new System.Drawing.Point(6, 5);
+            this.txtParameters.Name = "txtParameters";
+            this.txtParameters.ReadOnly = true;
+            this.txtParameters.ShowLineNumbers = false;
+            this.txtParameters.ShowVRuler = false;
+            this.txtParameters.Size = new System.Drawing.Size(811, 350);
+            this.txtParameters.TabIndex = 2;
             // 
             // MainForm
             // 
